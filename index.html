@@ -73,6 +73,37 @@
             }
         }
 
+        /* New scrolling banner - scrolling-banner-2 */
+        .scrolling-banner-2 {
+            background-color: gold;  /* Gold background */
+            color: red;              /* Red text */
+            font-size: 18px;
+            height: 35px;  /* Set a fixed height */
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+
+            /* Flexbox for centering content */
+            display: flex;
+            justify-content: flex-start; /* Ensure content starts at the left */
+            align-items: center;     /* Center vertically */
+        }
+        .scrolling-banner-content-2 {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left-2 24s linear infinite;
+        }
+        /* Animation for scrolling text from right to left */
+        @keyframes scroll-left-2 {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
         /* Reduced gap between the buttons (reduced by 5%) */
         p {
             margin: 9.5px 0; /* Reduced from 10px to 9.5px */
@@ -85,7 +116,13 @@
     <h1>The Star Pool Team</h1>
 </header>
 
-
+    <!-- Scrolling Banner 2 -->
+<div class="scrolling-banner-2">
+    <div class="scrolling-banner-content-2">
+        <p>Page Status : Online!!</p>
+    </div>
+</div>
+    
 <section>
     <div class="sub-header">Next Match  : Davy Lamp (H)</div>
     <div class="sub-header">Competition : Cup R1</div>
@@ -101,8 +138,8 @@
 <p><a href="https://starpool2025.github.io/form-prev/" class="button-link">Player Performance (Last Season)</a></p>
 <p><a href="https://starpool2025.github.io/super-five/" class="button-link">Thursday Super 5</a></p>
 <p><a href="https://starpool2025.github.io/hall-of-fame/" class="button-link">Hall of Fame</a></p>
-    
-<!-- Scrolling Banner -->
+
+<!-- Scrolling Banner 1 -->
 <div class="scrolling-banner">
     <div class="scrolling-banner-content">
         <p>Latest News : Welcome to The Star, new signing Max Newton and the overdue return of James I'Anson. #StarBoom!</p>
